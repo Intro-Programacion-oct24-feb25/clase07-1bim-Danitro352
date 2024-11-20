@@ -23,7 +23,7 @@ public class Ejemplo032 {
         entrada.useLocale(Locale.US);
         int limite = 5;
         int contador = 1;
-        int suma = 0;
+        double suma = 0; //se lo cambia a double para que use decimales
         int valor_ingresado;
         double promedio;
         
@@ -34,8 +34,8 @@ public class Ejemplo032 {
             System.out.printf("Valor ingresado %d\n", valor_ingresado);
             contador = contador + 1;
         }
-        promedio = suma / limite;
-        System.out.printf("La suma final es %d\n", suma);
+        promedio = suma / limite; //cuando hay un double y un entero automaticamente se vuelve double
+        System.out.printf("La suma final es %.2f\n", suma);
         System.out.printf("EL promedio final es %.2f\n", promedio);
 
     }
