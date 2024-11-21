@@ -32,7 +32,7 @@ public class Ejemplo101 {
         limite_tabla = entrada.nextInt();
         
         if (limite_tabla <=0){
-            limite_tabla = 12;4
+            limite_tabla = 12;
                     }
         String cadena = ""; // cadena acumulador
         cadena = String.format("%sTabla de multiplicar\n", cadena);
