@@ -28,6 +28,12 @@ public class Ejemplo101 {
         System.out.println("Ingrese el número de tabla a generar");
         tabla = entrada.nextInt();
         
+        System.out.println("Ingrese el limite de la tabla");
+        limite_tabla = entrada.nextInt();
+        
+        if (limite_tabla <=0){
+            limite_tabla = 12;4
+                    }
         String cadena = ""; // cadena acumulador
         cadena = String.format("%sTabla de multiplicar\n", cadena);
         
