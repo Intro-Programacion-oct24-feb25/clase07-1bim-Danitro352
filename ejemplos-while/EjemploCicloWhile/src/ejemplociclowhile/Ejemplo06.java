@@ -30,7 +30,7 @@ public class Ejemplo06 {
         System.out.println("Ingrese las notas de los "
                 + "estudiantes de su materia");
         // true 
-        // while (bandera) {
+        // while (bandera) { escribir solo "bandera" da lo mismo que poner "bandera == true"
         while(bandera==true){
             System.out.println("Ingrese calificación");
             calificacion = entrada.nextDouble();
