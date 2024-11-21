@@ -75,7 +75,7 @@ public class Ejemplo102 {
             operacion = tabla * contador;
            
             
-            cadena_multi = String.format("%s%d * %d = %d\n", 
+            cadena_multi = String.format("%s %d * %d = %d\n", 
                     cadena_multi, 
                     tabla, 
                     contador,
@@ -104,9 +104,9 @@ public class Ejemplo102 {
             
             
         }
-        cadena = String.format("Tabla de sumar\n%s\n"
-                + "Tabla de restar \n%s\n"
-                + "Tabla de multiplicar\n%s\n", cadena_suma, cadena_resta, cadena_multi );
+        cadena = String.format("Tabla de sumar\n\n%s\n"
+                + "Tabla de restar \n\n%s\n"
+                + "Tabla de multiplicar\n\n%s\n", cadena_suma, cadena_resta, cadena_multi );
         System.out.printf("%s\n", cadena);
         
     }
