@@ -12,7 +12,7 @@ import java.util.Scanner;
  *
  * @author reroes
  */
-public class Ejemplo061 {
+public class Ejemplo081 {
 
     /**
      * @param args the command line arguments
@@ -23,38 +23,31 @@ public class Ejemplo061 {
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
 
+        int contador = 0;
         double suma_total = 0;
+        double promedio_final;
         double calificacion;
         boolean bandera = true;
 
-        System.out.println("Ingrese las notas de los "
-                + "estudiantes de su materia");
-        // true 
-        // while (bandera) {
-        while (bandera == true) {
-            System.out.println("Ingrese calificación");
+        System.out.println("Ingrese las notas de los estudiantes de su materia");
+        while (bandera==true) {
+            System.out.println("Ingrese calificación:");
             calificacion = entrada.nextDouble();
-
-            if (calificacion > 20) {
-                calificacion = 20;
-
-            } else {
-                if (calificacion >= 0 && <= 5) {
-                    calificacion = 6;
-                }
-            }
             suma_total = suma_total + calificacion;
+            contador = contador + 1;
+
+            entrada.nextLine(); // Ojo usamos el limpiador del scanner (buffer)
 
             // proceso para salir del ciclo.
-            System.out.println("Ingrese el valor -1 para salir del ciclo");
-            int temporal = entrada.nextInt();
-
-            if (temporal == -1) {
+            System.out.println("Ingrese si / yes / s / y para salir");
+            String temporal = entrada.nextLine();
+            if (temporal.equals("si")||(temporal.equals("yes")||
+                    (temporal.equals("s")||(temporal.equals("y"))))) {
                 bandera = false;
             }
         }
-
-        System.out.printf("Suma de calificaciones es %.2f\n", suma_total);
+        promedio_final = suma_total / contador;
+        System.out.printf("El promedio final es %.2f\n", promedio_final);
 
     }
 }
