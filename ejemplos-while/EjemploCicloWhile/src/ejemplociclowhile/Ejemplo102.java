@@ -50,25 +50,24 @@ public class Ejemplo102 {
         // TODO code application logic here
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
-        int limite_tabla = 5;
+        int limite_tabla ;
         int contador = 1;
         int operacion;
         int tabla;
         int suma;
         int resta;
       
+        System.out.println("Ingrese el limite");
+        limite_tabla = entrada.nextInt();
         
         System.out.println("Ingrese el número de tabla a generar");
         tabla = entrada.nextInt();
         
         String cadena_multi = ""; // cadena acumulador
         
-        
         String cadena_suma = "";
         
-        
         String cadena_resta = "";
-        
         
         String cadena = "";
         
@@ -76,7 +75,7 @@ public class Ejemplo102 {
             operacion = tabla * contador;
            
             
-            cadena_multi = String.format("%s%d*%d=%d\n", 
+            cadena_multi = String.format("%s%d * %d = %d\n", 
                     cadena_multi, 
                     tabla, 
                     contador,
@@ -86,7 +85,7 @@ public class Ejemplo102 {
             operacion = tabla + contador;
            
             
-            cadena_suma = String.format("%s%d+%d=%d\n", 
+            cadena_suma = String.format("%s %d + %d = %d\n", 
                     cadena_suma, 
                     tabla, 
                     contador,
@@ -96,7 +95,7 @@ public class Ejemplo102 {
             operacion = tabla - contador;
            
             
-            cadena_resta = String.format("%s%d-%d=%d\n", 
+            cadena_resta = String.format("%s %d - %d = %d\n", 
                     cadena_resta, 
                     tabla, 
                     contador,
@@ -107,8 +106,8 @@ public class Ejemplo102 {
         }
         cadena = String.format("Tabla de sumar\n%s\n"
                 + "Tabla de restar \n%s\n"
-                + "Tabla de multiplicar\n%s\n", cadena_suma, cadena_resta, cadena );
-        System.out.printf("%s\n%s\n%s\n", cadena);
+                + "Tabla de multiplicar\n%s\n", cadena_suma, cadena_resta, cadena_multi );
+        System.out.printf("%s\n", cadena);
         
     }
 }
